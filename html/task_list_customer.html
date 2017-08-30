@@ -1,0 +1,24 @@
+<div class="content_title">
+    Ваши задания
+    <div class="right_title_container">
+        <a href="#" class="add_task_button" onclick="javascript:show_hide_add_task_form();">Создать задание</a>
+    </div>
+</div>
+<div class="add_task_container dn" id="add_task_container">
+    <input type="text" class="new_task_title" id="new_task_title" name="task_title" placeholder="* Название задания" />
+    <textarea id="new_task_text" class="new_task_text" name="task_text" placeholder="* Детальное описание, требования, сроки"></textarea>
+    <input type="number" class="new_task_reward" name="summ" placeholder="* Вознаграждение" id="new_task_reward" title="Сумма должна быть на счету"/>
+    <a href="#" class="new_task_send" onclick="javascript:send_new_task();">Отправить</a>
+</div>
+<div class="table_container">
+    <table id="customer_task_list" class="content_table dn">
+        <tr>
+            <td width="5%">ID</td>
+            <td width="45%" class="taleft">Название</td>
+            <td width="10%">Статус</td>
+            <td width="20%">Исполнитель</td>
+            <td width="20%">Стоимость</td>
+        </tr>
+    </table>
+    <div class="no_data dn" id="no_data_task">У вас нет оформленных заданий</div>
+</div>

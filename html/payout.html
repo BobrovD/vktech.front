@@ -1,0 +1,23 @@
+<div class="content_title">
+    <span id="salary_title">Заработок:</span>
+    <div class="right_title_container">
+        <a href="#" class="payout_create dn" id="payout_create" onclick="javascript:create_payout(this)">Вывести</a>
+    </div>
+</div>
+<div class="info right">
+    Минимальная сумма для вывода средств: 1000₽<br />
+    Время вывода средств: до 24ч.
+</div>
+<div class="table_container">
+    <table id="payout_history" class="content_table dn">
+        <tr id="payout_first_tr">
+            <th width="5%">ID</th>
+            <th width="15%">Статус</th>
+            <th width="15%">Сумма</th>
+            <th width="15%">Способ</th>
+            <th width="30%">Время</th>
+            <th width="20%">IP</th>
+        </tr>
+    </table>
+    <div class="no_data dn" id="no_data_payout">У вас нет выводов средств</div>
+</div>

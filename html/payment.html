@@ -1,0 +1,27 @@
+<div class="content_title">
+    <span id="balance_title">Баланс:</span>
+    <div class="right_title_container">
+        <a href="#" class="topup_submit" onclick="javascript:init_payment_request(document.getElementById('topup_summ'));">Пополнить на</a>
+        <input type="text" name="summ" class="topup_summ" id="topup_summ" value="" />
+    </div>
+</div>
+<form id="topup_balance_form" class="hidden" action='https://merchant.roboxchange.com/Index.aspx' method=POST>
+    <input type=hidden name=MrchLogin value=''>
+    <input type=hidden name=OutSum value=''>
+    <input type=hidden name=InvId value=''>
+    <input type=hidden name=Desc value=''>
+    <input type=hidden name=SignatureValue value=''>
+    <input type=hidden name=IsTest value='1'><!--commend-->
+</form>
+<div class="table_container">
+    <table id="payment_history" class="content_table dn">
+        <tr>
+            <th width="5%">ID</th>
+            <th width="15%">Статус</th>
+            <th width="15%">Сумма</th>
+            <th width="40%">Время</th>
+            <th width="25%">IP</th>
+        </tr>
+    </table>
+    <div class="no_data dn" id="no_data_payment">У вас нет пополнений баланса</div>
+</div>

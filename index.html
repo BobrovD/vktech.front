@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html> <!-- remove when develop ends -->
+    <head>
+        <meta charset="UTF-8" />
+        <title>Исполнение заказов</title>
+        <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+        <link href="/css/style.css?342" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <header class="header">
+                <div class="logo">
+                    <a href="/"><h1>e<span class="c751010">XOR</span></h1></a>
+                </div>
+                <div class="title">
+                    <h2><span class="c751010">OR</span>der e<span class="c751010">X</span>ecutor</h2>
+                </div>
+                <div class="about">
+                    <a href="#" data-nav="/about" onclick="javascript:app.pagemaker.print_about_page();return false;">О проекте</a>
+                </div>
+            </header><!-- .header-->
+
+            <div class="middle">
+
+                <div class="container">
+                    <main class="content" id="main_container">
+                    </main><!-- .content -->
+                </div><!-- .container-->
+
+                <aside class="left-sidebar" id="left_side_container">
+
+                </aside><!-- .left-sidebar -->
+
+
+
+                <div class="loader" id="loader_container">
+                    <img src="image/loader.gif" />
+                    <div class="loader_message">
+                        Подбираем ответственных исполнителей...
+                    </div>
+                </div>
+
+            </div><!-- .middle-->
+
+        </div><!-- .wrapper -->
+
+        <footer class="footer">
+
+        </footer><!-- .footer -->
+        <script type="text/javascript" src="/javascript/func.js" defer></script>
+        <script type="text/javascript" src="/javascript/script.js" defer></script>
+    </body>
+</html>

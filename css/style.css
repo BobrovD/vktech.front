@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+body {
+    font: 14px/18px Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+.clear{clear:both;}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #666666;
+    font-weight:bold;
+}
+a:hover{
+    color: #751010;
+}
+
+a.button{
+     display:block;
+     border: 1px solid #CCCCCC;
+     padding: 3px 5px;
+     background-color: #FFFFFF;
+     margin-right:1px;
+}
+a.button.right{
+    float:right;
+}
+a.button.left{
+    float:left;
+}
+a.button:hover{
+    color:#751010;
+    border-color: #751010;
+}
+.shorten_text{
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+input, textarea{
+    display:block;
+    padding:3px 5px;
+    margin:5px 5px;
+    outline: none;
+}
+.dn{
+    display:none;
+}
+.c751010{
+    color:#751010;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+    height: 80px;
+    border-bottom: 1px solid #751010;
+}
+    .header .logo{
+        float:left;
+        padding-top:10px;
+        height: 70px;
+    }
+    .header .title{
+        margin-left:30px;
+        float:left;
+        height: 30px;
+        padding-top:50px;
+    }
+    .header h1{
+        font-size:70px;
+        line-height:70px;
+    }
+
+    .header h2{
+        line-height:30px;
+        font-size:30px;
+    }
+    .header .about{
+        margin-top:60px;
+        height:20px;
+        float: right;
+    }
+    .header .about a{
+        font-size: 20px;
+    }
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.middle {
+    width: 100%;
+    padding: 0 0 100px;
+    position: relative;
+}
+.middle:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+    .loader{
+        background-color:#FFFFFF;
+        position:absolute;
+        width:100%;
+        height:100%;
+    }
+        .loader img{
+            width: 96px;
+            margin: 100px 452px 20px;
+        }
+        .loader .loader_message{
+            width:1000px;
+            font-size:22px;
+            text-align:center;
+            color: #888888;
+        }
+.container {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+.content {
+    padding: 10px 0 0 220px;
+}
+    .content .registration{
+        width:700px;
+    }
+    .content .content_title{
+        text-align: left;
+        font-size: 26px;
+        line-height:40px;
+        margin-left:5px;
+        height:30px;
+    }
+    .content .content_text{
+        padding: 10px 0 0 5px;
+        font-size: 16px;
+        line-height:20px;
+    }
+    .content .message_text{
+        padding: 10px 0 0 5px;
+        font-size: 18px;
+        line-height:22px;
+    }
+    .content .registration input{
+        float:left;
+        width:300px;
+        margin:15px 5px;
+        font-size:14px;
+        height:17px;
+        border-top:0;
+        border-right:0;
+        border-bottom:1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+        color: #000000;
+    }
+    .content .registration input.empty{
+        color:#CCCCCC;
+    }
+    .content .registration input:focus{
+        border-bottom:1px solid #751010;
+        border-left: 1px solid #751010;
+        color:#751010;
+    }
+    .content .registration .info{
+        display:none;
+        margin:15px 5px;
+        padding: 0 5px 0 0;
+        float:left;
+        font-size:14px;
+        height: 23px;
+        border-right: 1px solid #751010;
+        border-bottom:1px solid #751010;
+    }
+    .content .registration .button{
+        margin-left: 5px;
+        font-size:18px;
+    }
+
+
+    .content .right_title_container{
+        float:right;
+        width:260px;
+        text-align: right;
+    }
+    .content .topup_submit, .content .payout_submit{
+        font-size: 18px;
+    }
+    .content .topup_summ{
+        width:85px;
+        font-size:18px;
+        border: 1px solid #EEEEEE;
+        float:right;
+        margin: 8px 0 0 8px;
+    }
+    .content .topup_summ:focus{
+        border:1px solid #751010;
+    }
+    .content .topup_summ.error{
+        border:1px solid #CC0000;
+    }
+    .content .info, .content .info.left {
+        text-align:left;
+        margin: 10px 0 5px 5px;
+    }
+    .content .info.right{
+        text-align:right;
+        margin: 10px 5px 5px 0;
+    }
+    .content .table_container{
+        margin: 30px 5px;
+    }
+    .content .content_table{
+        width:100%;
+        text-align: center;
+        font-size:18px;
+    }
+    .content .content_table.session_list{
+        text-align: center;
+        font-size:14px;
+    }
+    .content .content_table td{
+        padding: 8px 0;
+    }
+    .content .content_table td.received{
+        color:#00CC00;
+    }
+    .content .content_table td.rejected{
+        color:#CC0000;
+    }
+    .content .content_table td.created{
+        color:#CCCC00;
+    }
+    .content .content_table td.taleft{
+        text-align: left;
+    }
+
+    .content .table_container .no_data{
+        text-align:center;
+        font-size:16px;
+        color:#751010;
+    }
+
+    .content .add_task_container{
+        padding: 10px 5px;
+    }
+    .content .add_task_container .new_task_title{
+        width: 400px;
+        font-size: 16px;
+    }
+    .content .add_task_container .new_task_text{
+        width: 600px;
+        height: 150px;
+        font-size: 14px;
+    }
+    .content .add_task_container .new_task_reward{
+        font-size: 16px;
+        float:left;
+    }
+    .content .add_task_container .new_task_send{
+        float:left;
+        margin:10px 0 0 350px;
+    }
+
+
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+.left-sidebar {
+    padding-top:20px;
+    padding-right:10px;
+    padding-bottom:50px;
+    float: left;
+    width: 200px;
+    margin-left: -100%;
+    position: relative;
+    border-right:1px solid #751010;
+}
+
+    .left-sidebar .auth{
+    }
+        .left-sidebar .left_sidebar_title{
+            text-align: left;
+            font-size: 22px;
+            margin-left:5px;
+        }
+        .left-sidebar .sign_in_switcher div{
+            cursor:pointer;
+            color:#CCCCCC;
+            padding: 3px 0;
+            font-weight:bold;
+            font-size:14px;
+            margin:10px 5px;
+            border-bottom:1px solid #CCCCCC;
+        }
+        .left-sidebar .sign_in_switcher div.selected{
+            color:#751010;
+            border-bottom:1px solid #751010;
+        }
+        .left-sidebar .sign_in_switcher .switch_customer{
+            float:left;
+            text-align:left;
+        }
+        .left-sidebar .sign_in_switcher .switch_executor{
+            float:right;
+            text-align:right;
+        }
+
+        .left-sidebar input{
+            width:180px;
+            border: 1px solid #CCCCCC;
+        }
+
+        .left-sidebar .create_account{
+            margin-left:5px;
+        }
+        .left-sidebar .drop_pwd{
+            text-align:right;
+            margin-top:5px;
+            margin-left:5px;
+            font-size:12px;
+        }
+
+        .left-sidebar .sidebar_title{
+            font-size: 18px;
+            text-align: left;
+            width: 200px;
+        }
+        .left-sidebar .auth_data .name{
+            overflow: hidden;
+            text-overflow:ellipsis;
+            text-align:left;
+            display:block;
+            font-size:20px;
+            line-height:22px;
+            width: 200px;
+            margin: 0 0 10px;
+        }
+        .left-sidebar .balance{
+            text-align:right;
+            display:block;
+            float:right;
+            font-size:18px;
+            line-height:20px;
+        }
+        .left-sidebar .sign_out{
+            display:block;
+            text-align:left;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+    width: 1000px;
+    margin: -100px auto 0;
+    height: 100px;
+    position: relative;
+}

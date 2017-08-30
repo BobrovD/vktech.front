@@ -1,0 +1,36 @@
+<div class="content_title">
+    <span>Регистрация</span>
+</div>
+<div class="content_page registration" id="registration_container">
+    <div class="input_container">
+        <input type="text" name="fname" placeholder="* Имя" onblur="javascript:show_registration_row_details(this, 'hide')" onfocus="javascript:show_registration_row_details(this, 'show')" required/>
+        <div class="info">От 2 до 30 символов, руссикие и латинские буквы</div>
+        <div class="clear"></div>
+    </div>
+    <div class="input_container">
+        <input type="text" name="sname" placeholder="* Фамилия" onblur="javascript:show_registration_row_details(this, 'hide')" onfocus="javascript:show_registration_row_details(this, 'show')" required/>
+        <div class="info">От 2 до 30 символов, руссикие, латинские буквы и тире</div>
+        <div class="clear"></div>
+    </div>
+    <div class="input_container">
+        <input type="email" name="email" placeholder="* Почта" id="registration_email" onblur="javascript:show_registration_row_details(this, 'hide')" onfocus="javascript:show_registration_row_details(this, 'show')"  required/>
+        <div class="info">Email для входа в систему</div>
+        <div class="clear"></div>
+    </div>
+    <div class="input_container">
+        <input type="tel" name="phone" placeholder="* Телефон" onblur="javascript:show_registration_row_details(this, 'hide')" onfocus="javascript:show_registration_row_details(this, 'show')">
+        <div class="info">Формат: +7(999)1234567</div>
+        <div class="clear"></div>
+    </div>
+    <div class="input_container">
+        <input type="password" name="password" placeholder="* Пароль" id="reg_pwd" onblur="javascript:show_registration_row_details(this, 'hide')" onfocus="javascript:show_registration_row_details(this, 'show')" required/>
+        <div class="info">От 6 до 20 символов, латинские буквы, цифры, !_-#%</div>
+        <div class="clear"></div>
+    </div>
+    <div class="input_container">
+        <input type="password" name="confirm_password" placeholder="* Подтверждение пароля" onblur="javascript:show_registration_row_details(this, 'hide')" onfocus="javascript:show_registration_row_details(this, 'show')" required/>
+        <div class="info">Пароли должны совпадать</div>
+        <div class="clear"></div>
+    </div>
+    <a href="#" class="button left" onclick="javascript:send_registration_form();return false;">Зарегистрироваться</a>
+</div>
