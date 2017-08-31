@@ -14,6 +14,7 @@ class Application {
         if(this.token === undefined || this.account_type === undefined){
             this.pagemaker.hide_loader();
             this.pagemaker.print_auth_sidebar();
+            this.pagemaker.print_global_task_list();
         }else{
             this.check_auth_data()
         }
@@ -34,6 +35,7 @@ class Application {
             if(answ.target.status === 200){
                 this.user = JSON.parse(answ.target.responseText);
                 this.pagemaker.print_authorized_sidebar(this.user);
+                this.pagemaker.print_global_task_list();
                 app.user = this.user;
             }
         };
@@ -131,13 +133,27 @@ class PageMaker {
         this.load_page('sign_in_form.html', on_load_page)
     }
 
+    print_global_task_list(){
+        let ths = this;
+        let on_load_page = (answ) => {
+            ths.pointers.mainPage.innerHTML = answ.target.responseText;
+            load_global_task_list();
+        };
+        let on_load_script = () => {
+            ths.load_page('task_list.html', on_load_page)
+        };
+        this.load_script('task.js', on_load_script);
+    }
+
     print_registration_form(){
-        this.load_script('registration.js');
         let ths = this;
         let on_load_page = (answ) => {
             ths.pointers.mainPage.innerHTML = answ.target.responseText;
         };
-        this.load_page('registration_form.html', on_load_page, true)
+        let on_load_script = () => {
+            ths.load_page('registration_form.html', on_load_page)
+        };
+        this.load_script('registration.js', on_load_script);
     }
 
     print_about_page(){
@@ -153,13 +169,15 @@ class PageMaker {
         let on_load_page = (answ) => {
             ths.pointers.leftSide.innerHTML = answ.target.responseText;
             document.getElementById('user_data_name').innerHTML = user.fname + ' ' + user.sname;
-            if(app.account_type === 'customer')
-                document.getElementById('user_data_balance').innerHTML += ' ' + user.balance + '\u20bd';
-            else
-                document.getElementById('user_data_balance').innerHTML += ' ' + user.salary + '\u20bd';
+            if(app.account_type === 'customer') {
+                document.getElementById('user_data_balance').innerHTML = user.balance + '\u20bd';
+                document.getElementById('user_data_balance').setAttribute('onclick', 'javascript:app.pagemaker.print_user_payment();return false;');
+            }else if(app.account_type === 'executor') {
+                document.getElementById('user_data_balance').innerHTML = user.salary + '\u20bd';
+                document.getElementById('user_data_balance').setAttribute('onclick', 'javascript:app.pagemaker.print_user_payout();return false;');
+            }
         };
-        let page = app.account_type + '_authorized_sidebar.html';
-        this.load_page(page, on_load_page)
+        this.load_page('authorized_sidebar.html', on_load_page)
     }
 
     print_user_payment(){
@@ -210,26 +228,26 @@ class PageMaker {
         this.load_script('account.js', on_load_script);
     }
 
-    print_customer_task_list(){
+    print_personal_task_list(){
         let ths = this;
         let on_load_page = (answ) => {
             ths.pointers.mainPage.innerHTML = answ.target.responseText;
-            load_task_list();
+            load_personal_task_list();
         };
         let on_load_script = () => {
-            ths.load_page('task_list_customer.html', on_load_page);
+            ths.load_page('task_list.html', on_load_page);
         };
         this.load_script('task.js', on_load_script);
     }
 
-    print_task_to_customer(task_id){
+    print_task(task_id){
         let ths = this;
         let on_load_page = (answ) => {
             ths.pointers.mainPage.innerHTML = answ.target.responseText;
-            load_task_to_customer(task_id);
+            load_task(task_id);
         };
         let on_load_script = () => {
-            ths.load_page('task_customer.html', on_load_page);
+            ths.load_page('task.html', on_load_page);
         };
         this.load_script('task.js', on_load_script);
     }

@@ -148,7 +148,6 @@ input, textarea{
         font-size: 26px;
         line-height:40px;
         margin-left:5px;
-        height:30px;
     }
     .content .content_text{
         padding: 10px 0 0 5px;
@@ -201,6 +200,9 @@ input, textarea{
         width:260px;
         text-align: right;
     }
+    .content .right_title_container .small{
+        font-size:18px;
+    }
     .content .topup_submit, .content .payout_submit{
         font-size: 18px;
     }
@@ -237,18 +239,28 @@ input, textarea{
         text-align: center;
         font-size:14px;
     }
+    .content .content_table .table_head td{
+        padding-bottom: 25px;
+    }
     .content .content_table td{
         padding: 8px 0;
     }
-    .content .content_table td.received{
+    .content .content_table td.received, .content .content_table td.finished{
         color:#00CC00;
     }
     .content .content_table td.rejected{
         color:#CC0000;
     }
+    .content .content_table td.in_progress{
+        color:#CC3300;
+    }
+    .content .content_table td.actual{
+        color:#0000CC;
+    }
     .content .content_table td.created{
         color:#CCCC00;
     }
+
     .content .content_table td.taleft{
         text-align: left;
     }
@@ -259,27 +271,58 @@ input, textarea{
         color:#751010;
     }
 
-    .content .add_task_container{
+    .content .task_container{
         padding: 10px 5px;
     }
-    .content .add_task_container .new_task_title{
-        width: 400px;
+    .content .task_container .task_title{
+        float:left;
+        width: 600px;
         font-size: 16px;
     }
-    .content .add_task_container .new_task_text{
-        width: 600px;
+    .content .task_container .task_status{
+        float:right;
+        font-size:18px;
+        font-weight:bold;
+        line-height:20px;
+        margin-right:0;
+    }
+    .content .task_container .task_status.actual{
+        color: #0000CC;
+    }
+    .content .task_container .task_status.in_progress{
+        color: #CC3300;
+    }
+    .content .task_container .task_status.finished{
+        color: #00CC00;
+    }
+    .content .task_container .outborder{
+        border:1px solid #EEEEEE;
+    }
+    .content .task_container .task_text{
+        width: 755px;
         height: 150px;
         font-size: 14px;
     }
-    .content .add_task_container .new_task_reward{
+    .content .task_container .task_reward{
         font-size: 16px;
         float:left;
     }
-    .content .add_task_container .new_task_send{
-        float:left;
-        margin:10px 0 0 350px;
+    .content .task_container .bottom_task_button{
+        float:right;
+        font-size:18px;
+        margin:6px 0 0 0;
     }
-
+    .content .bottom_container .subtitle{
+        font-size:16px;
+        padding-left:10px;
+    }
+    .content .bottom_container a{
+        display: block;
+        margin: 10px 0 0 20px;
+    }
+    .content .bottom_container{
+        margin-top:30px;
+    }
 
 /* Left Sidebar
 -----------------------------------------------------------------------------*/

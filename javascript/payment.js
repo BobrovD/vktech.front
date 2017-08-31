@@ -35,7 +35,7 @@ let print_payment_history = (data) => {
         pid.innerHTML = payments[k].payment_id;
         pip.innerHTML = payments[k].user_ip;
         psumm.innerHTML = payments[k].summ;
-        let date = new Date((parseInt(payments[k].time)) * 1000 + parseInt(app.timezoneOffset));
+        let date = new Date((parseInt(payments[k].time)/* + app.timezoneOffset*/) * 1000);
         let day = date.getDay() < 10 ? '0' + date.getDay() : date.getDay();
         let month = date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth();
         let year = date.getFullYear();

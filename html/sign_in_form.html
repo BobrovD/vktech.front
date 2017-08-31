@@ -1,12 +1,12 @@
 <div class="auth">
     <div class="left_sidebar_title">Вход</div>
     <div class="sign_in_switcher">
-        <div class="switch_customer selected" id="sign_in_customer" data-type="customer" onclick="javascript:select_account_type(this)">Заказчик</div>
-        <div class="switch_executor" id="sign_in_executor"  data-type="executor" onclick="javascript:select_account_type(this)">Исполнитель</div>
+        <div class="switch_customer selected" id="sign_in_customer" data-type="customer" onclick="javascript:select_account_type(this);return false;">Заказчик</div>
+        <div class="switch_executor" id="sign_in_executor"  data-type="executor" onclick="javascript:select_account_type(this);return false;">Исполнитель</div>
     </div>
     <input type="text" name="email" id="auth_email" placeholder="Email">
     <input type="password" name="password" id="auth_password" placeholder="Password">
-    <a href="#" class="button right" onclick="javascript:app.sign_in(this.parentNode);">Войти</a>
+    <a href="#" class="button right" onclick="javascript:app.sign_in(this.parentNode);return false;">Войти</a>
     <div class="create_account">
         Нет аккаунта?<a href="#" data-location="/registration" onclick="javascript:app.pagemaker.print_registration_form();return false;">Регистрация</a>
     </div>
